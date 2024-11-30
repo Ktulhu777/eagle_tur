@@ -1,0 +1,95 @@
+html body {
+    height: 100%; /* Занимает всю высоту окна */
+    margin: 0; /* Убираем отступы */
+    display: flex;
+    flex-direction: column; /* Размещаем элементы вертикально */
+}
+
+
+.navbar-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center; /* Выровнять элементы по вертикали */
+    gap: 10px; /* Расстояние между блоками меню и авторизации */
+}
+
+.navbar-menu {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex; /* Flexbox для списка */
+    gap: 5px; /* Промежуток между ссылками */
+}
+
+.navbar-menu li {
+    display: inline-block;
+}
+
+.navbar-menu li a {
+    display: inline-block;
+    color: white;
+    opacity: 0.6;
+    text-decoration: none;
+    padding: 10px;
+    transition: all .07s ease-in-out;
+}
+
+.navbar-menu li a:hover {
+    opacity: 1;
+}
+
+.oauth {
+    display: flex; /* Flexbox для блока с авторизацией */
+    gap: 0; /* Промежуток между ссылками */
+}
+
+
+.oauth a {
+    opacity: 0.6;
+    padding: 5px;
+    margin-right: 10px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: coral;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(255, 127, 80, .2);
+    transition: all .01s ease-in-out;
+}
+
+.oauth a:hover {
+    opacity: 1;
+    transform: scale(1.04);
+    box-shadow: 0 9px 9px rgba(255, 127, 80, .5);
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: #383F31;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+    z-index: 10; /* Размещаем поверх размытого слоя */
+    position: relative; /* Отделяем от слоя размытия */
+}
+
+.navbar .container {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand img {
+    padding-left: 20px;
+    height: 50px; /* Высота логотипа */
+    width: auto; /* Автоматическая ширина для сохранения пропорций */
+}
+/* -----------------------  */
+
+.full-width-image {
+    width: 100%;
+    height: 550px; /* Высота 100% от высоты экрана */
+    object-fit: cover; /* Обеспечивает правильное масштабирование фона */
+    top: 0;
+    left: 0;
+}
